@@ -1,0 +1,7 @@
+/*
+ * Decorator pattern: 
+ *    
+ *
+ *
+ *
+ */
