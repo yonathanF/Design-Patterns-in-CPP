@@ -23,10 +23,6 @@ void State0::addNewCharacter(char newChar){
   }
 }
 
-bool State0::isValid(){
-  return false;
-}
-
 
 void State1::addNewCharacter(char newChar){
   if(newChar == 'b'){
@@ -35,10 +31,6 @@ void State1::addNewCharacter(char newChar){
   else{
     State::FA->goToState(State::FA->getRejectState());
   }
-}
-
-bool State1::isValid(){
-  return false;
 }
 
 
@@ -54,10 +46,6 @@ void State2::addNewCharacter(char newChar){
   }
 }
 
-bool State2::isValid(){
-  return false;
-}
-
 void State3::addNewCharacter(char newChar){
   State::FA->goToState(State::FA->getRejectState());
 }
@@ -68,10 +56,6 @@ bool State3::isValid(){
 
 void RejectState::addNewCharacter(char newChar){
   State::FA->goToState(State::FA->getRejectState());
-}
-
-bool RejectState::isValid(){
-  return false;
 }
 
 

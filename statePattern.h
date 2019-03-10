@@ -5,7 +5,7 @@ class State{
   public:
     State(FiniteState *fa):FA(fa){};
     virtual void addNewCharacter(char newChar) = 0;
-    virtual bool isValid() = 0;
+    virtual bool isValid() {return false;};
   protected:
     FiniteState *FA;
 
@@ -16,7 +16,6 @@ class State0 : public State{
   public: 
     State0(FiniteState *fa):State(fa){};
     void addNewCharacter(char newChar);
-    bool isValid();
 };
 
 class State1 : public State{
@@ -24,7 +23,6 @@ class State1 : public State{
   public: 
     State1(FiniteState *fa):State(fa){};
     void addNewCharacter(char newChar);
-    bool isValid();
 };
 
 class State2 : public State{
@@ -32,7 +30,6 @@ class State2 : public State{
   public: 
     State2(FiniteState *fa):State(fa){};
     void addNewCharacter(char newChar);
-    bool isValid();
 };
 
 class State3 : public State{
@@ -48,7 +45,6 @@ class RejectState: public State{
   public: 
     RejectState(FiniteState *fa):State(fa){};
     void addNewCharacter(char newChar);
-    bool isValid();
 };
 
 
