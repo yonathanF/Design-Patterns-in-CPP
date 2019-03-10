@@ -58,6 +58,7 @@ class FiniteState{
     FiniteState();
     ~FiniteState();
     void goToState(State *nextState) { currentState = nextState;};
+    void addNewCharacter(char newChar) {currentState->addNewCharacter(newChar);};
     bool isValid() {return currentState->isValid();};
 
     State* getState0(){return state0;}; 
